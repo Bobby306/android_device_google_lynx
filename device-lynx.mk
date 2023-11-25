@@ -26,6 +26,8 @@ DEVICE_PACKAGE_OVERLAYS += device/google/lynx/lynx/overlay
 include device/google/lynx/audio/lynx/audio-tables.mk
 include device/google/gs201/device-shipping-common.mk
 include device/google/lynx/vibrator/cs40l26/device.mk
+include device/google/gs-common/touch/gti/gti.mk
+include device/google/gs-common/wlan/dump.mk
 
 # go/lyric-soong-variables
 $(call soong_config_set,lyric,camera_hardware,lynx)
@@ -148,6 +150,7 @@ include device/google/gs101/fingerprint/udfps_factory.mk
 endif
 
 # Vibrator HAL
+ADAPTIVE_HAPTICS_FEATURE := adaptive_haptics_v1
 PRODUCT_VENDOR_PROPERTIES += \
 	ro.vendor.vibrator.hal.supported_primitives=243 \
 	ro.vendor.vibrator.hal.f0.comp.enabled=1 \
@@ -176,7 +179,8 @@ endif
 
 # DCK properties based on target
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.gms.dck.eligible_wcc=2
+    ro.gms.dck.eligible_wcc=2 \
+    ro.gms.dck.se_capability=1
 
 # WIFI COEX
 PRODUCT_COPY_FILES += \
@@ -246,9 +250,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Enable front camera always binning for 720P or smaller resolution
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.camera.front_720P_always_binning=true
-
-# Use GmsCorePrebuilt y2022w28
-USE_GMSCORE_PREBUILT_Y2022W28 := true
 
 # Device features
 PRODUCT_COPY_FILES += \

@@ -15,6 +15,7 @@ kernel/drivers/soc/google/debug/debug-snapshot-debug-kinfo.ko
 kernel/drivers/soc/google/debug/ehld.ko
 kernel/drivers/soc/google/debug/exynos-debug-test.ko
 kernel/drivers/soc/google/debug/pixel-debug-test.ko
+kernel/drivers/soc/google/debug/pixel-suspend-diag.ko
 kernel/drivers/soc/google/debug/itmon.ko
 kernel/drivers/soc/google/debug/exynos-coresight.ko
 kernel/drivers/soc/google/debug/exynos-ecc-handler.ko
@@ -93,7 +94,6 @@ kernel/drivers/mfd/s2mpg12-mfd.ko
 kernel/drivers/mfd/s2mpg13-mfd.ko
 kernel/drivers/dma-buf/heaps/samsung/samsung_dma_heap.ko
 kernel/drivers/scsi/ufs/ufs-exynos-core.ko
-kernel/drivers/scsi/ufs/ufs-pixel-fips140.ko
 kernel/drivers/scsi/sg.ko
 kernel/drivers/spi/spidev.ko
 kernel/drivers/spi/spi-s3c64xx.ko
@@ -130,7 +130,6 @@ kernel/drivers/devfreq/google/governor_memlat.ko
 kernel/drivers/devfreq/google/memlat-devfreq.ko
 kernel/drivers/iio/power/odpm.ko
 kernel/drivers/trusty/trusty-core.ko
-kernel/drivers/trusty/trusty-irq.ko
 kernel/drivers/trusty/trusty-log.ko
 kernel/drivers/trusty/trusty-test.ko
 kernel/drivers/trusty/trusty-virtio.ko
@@ -184,6 +183,3 @@ extra/snd-soc-wm-adsp.ko
 extra/st21nfc.ko
 extra/touch_bus_negotiator.ko
 extra/touch_offload.ko
-extra/focal_touch.ko
-extra/goodix_brl_touch.ko
-extra/goog_touch_interface.ko
